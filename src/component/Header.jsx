@@ -14,7 +14,7 @@ export const Header = () => {
 const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: '#be2647',
+      backgroundColor: '#00000078',
     },
     texto:{
         textAlign:'center',
