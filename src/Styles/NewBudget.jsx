@@ -1,9 +1,11 @@
-import { StyleSheet } from "react-native-web";
+import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        backgroundColor: '#00000078',
+        backgroundColor: 'white',
+        marginHorizontal:30,
+        padding:10,
+        
     },
     texto: {
         textAlign: 'center',
@@ -11,7 +13,8 @@ const styles = StyleSheet.create({
         color: 'white',
         fontWeight: 'bold',
         paddingVertical: 10,
-    }
+    },
+    
 });
 
 export default styles
