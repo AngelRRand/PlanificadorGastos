@@ -1,14 +1,18 @@
-
-import { StyleSheet, View, Alert  } from 'react-native';
+import { useState } from 'react';
+import { StyleSheet, View, Alert } from 'react-native';
+import ControlBudget from './src/component/ControlBudget';
 import { Header } from './src/component/Header';
 import NewBudget from './src/component/NewBudget';
 
 export default function App() {
+  const [valid, setValid] = useState(false);
+  const [budget, setBudget] = useState(0);
 
-  const handleBudget=(budget)=>{
-    if(Number(budget) > 0){
-      console.log('todo bien')
-    }else{
+  
+  const handleBudget = (budget) => {
+    if (Number(budget) > 0) {
+      setValid(true)
+    } else {
       Alert.alert('Error', 'El presupuesto no puede ser 0 o menor a 0', 'OK')
     }
   }
@@ -18,9 +22,18 @@ export default function App() {
     <View style={styles.container}>
       <View>
         <Header style={styles.header}></Header>
-        <NewBudget 
-          handleBudget={handleBudget}
-        ></NewBudget>
+        {
+          !valid ?
+            <NewBudget
+              budget={budget}
+              setBudget={setBudget}
+              handleBudget={handleBudget}
+            />
+            :
+            <ControlBudget
+            budget={budget}
+            />
+        }
       </View>
     </View>
   );
