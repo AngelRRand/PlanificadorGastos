@@ -4,13 +4,15 @@ import styles from '../Styles/NewBudget.jsx'
 const NewBudget = () => {
   return (
     <View style={styles.container}>
-        <Text>Definir Presupuesto</Text>
-        <TextInput
-
-        />
-        <Pressable>
-            <Text>Agregar presupuesto</Text>
-        </Pressable>
+      <Text  style={styles.label}>Definir Presupuesto</Text>
+      <TextInput
+        keyboardType='numeric'
+        placeholder='Agregar presupuesto'
+        style={styles.input}
+      />
+      <Pressable  style={styles.button}>
+        <Text  style={styles.buttonText}>Agregar presupuesto</Text>
+      </Pressable>
     </View>
   )
 }

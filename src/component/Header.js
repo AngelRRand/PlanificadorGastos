@@ -5,8 +5,8 @@ import styles from '../Styles/Header.jsx'
 export const Header = () => {
   
   return (
-    <SafeAreaView style={styles.container}>
-        <Text style={styles.texto}>Planificador de Gastos</Text>
+    <SafeAreaView >
+        <Text style={styles.text}>Planificador de Gastos</Text>
         
     </SafeAreaView>
   )
