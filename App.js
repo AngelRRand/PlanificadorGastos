@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import { Modal, View, Alert, Pressable, Image } from 'react-native';
-import ControlBudget from './src/component/ControlBudget';
 import { Header } from './src/component/Header';
-import NewBudget from './src/component/NewBudget';
+import ControlBudget from './src/component/ControlBudget.js';
+import NewBudget from './src/component/NewBudget.js';
+import FormBudget from './src/component/FormBudget.js';
 import styles from '../Styles/StylesApp.jsx';
 
 
@@ -49,7 +50,9 @@ export default function App() {
               animationType='slide'
               visible={modal}
             >
-
+              <FormBudget
+              
+              />
             </Modal>
           )
         }
