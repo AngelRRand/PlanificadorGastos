@@ -34,7 +34,7 @@ const FormBudget = () => {
                 <View style={styles.containerInput}>
                     <Text style={styles.laber}>Expense Category</Text>
                     <Picker>
-
+                        <Picker.Item label="--Selection--" value=""/>
                     </Picker>
                 </View>
             </View>
