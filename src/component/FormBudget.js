@@ -6,8 +6,8 @@ const FormBudget = () => {
     return (
         <SafeAreaView style={styles.container}>
             <View>
-                <Pressable>
-                    <Text>
+                <Pressable style={styles.btnClouse}>
+                    <Text style={styles.btnTextClouse}>
                         Cancel
                     </Text>
                 </Pressable>
