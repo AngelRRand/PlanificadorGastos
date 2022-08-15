@@ -55,10 +55,13 @@ const styles = StyleSheet.create({
         textTransform:'uppercase'
     },
     btnClouse:{
-
+        backgroundColor:'#db2777',
+        marginTop:10,
+        padding: 10,
+        marginHorizontal:10,
     },
     btnTextClouse:{
-        
+        textTransform:'uppercase'
     }
 });
 
