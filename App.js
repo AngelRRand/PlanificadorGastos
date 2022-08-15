@@ -51,7 +51,8 @@ export default function App() {
               visible={modal}
             >
               <FormBudget
-              
+                modal={modal}
+                setModal={setModal}
               />
             </Modal>
           )
