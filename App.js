@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { StyleSheet, View, Alert, Pressable, Image } from 'react-native';
+import { Modal, View, Alert, Pressable, Image } from 'react-native';
 import ControlBudget from './src/component/ControlBudget';
 import { Header } from './src/component/Header';
 import NewBudget from './src/component/NewBudget';
@@ -42,9 +42,21 @@ export default function App() {
             </>
         }
       </View>
+
+        {
+          modal && (
+            <Modal
+              animationType='slide'
+              visible={modal}
+            >
+
+            </Modal>
+          )
+        }
+
       {
         valid && (
-          <Pressable>
+          <Pressable onPress={()=> setModal(!modal)}>
             <Image
               style={styles.image}
               source={require('./src/IMG/nuevo-gasto.png')}
