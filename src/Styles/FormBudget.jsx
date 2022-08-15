@@ -49,8 +49,10 @@ const styles = StyleSheet.create({
         padding: 10,
     },
     btnText:{
-        textAlign:'center'
-        
+        textAlign:'center',
+        color: '#fff',
+        fontWeight:'bold',
+        textTransform:'uppercase'
     }
 });
 
