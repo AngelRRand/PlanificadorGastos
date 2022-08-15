@@ -45,8 +45,8 @@ const FormBudget = () => {
                         <Picker.Item label="Health" value="Health"/>
                     </Picker>
                 </View>
-                <Pressable>
-                    <Text>New Bills!!</Text>
+                <Pressable style={styles.btnSubmit}>
+                    <Text style={styles.btnText}>New Bills!!</Text>
                 </Pressable>
             </View>
         </SafeAreaView>
