@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { StyleSheet, View, Alert, Pressable } from 'react-native';
+import { StyleSheet, View, Alert, Pressable, Image } from 'react-native';
 import ControlBudget from './src/component/ControlBudget';
 import { Header } from './src/component/Header';
 import NewBudget from './src/component/NewBudget';
@@ -34,12 +34,24 @@ export default function App() {
               handleBudget={handleBudget}
             />
             :
+            <>
             <ControlBudget
             budget={budget}
             bills={bills}
             />
+            
+            </>
         }
       </View>
+      {
+        valid && (
+          <Pressable>
+            <Image
+              source={require('./')}
+            />
+          </Pressable>
+        )
+      }
     </View>
   );
 }
