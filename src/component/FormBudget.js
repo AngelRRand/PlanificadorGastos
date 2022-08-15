@@ -12,10 +12,15 @@ const FormBudget = () => {
                     </Text>
                 </Pressable>
             </View>
-            <View>
-                <Text>
-
-                </Text>
+            <View style={form}>
+                <Text style={title}>New Bills</Text>
+                <View style={styles.containerInput}>
+                    <Text style={styles.laber}>Expense name</Text>
+                    <TextInput
+                        style={styles.input}
+                        placeholder='Expense name. ej. Cine'
+                    />
+                </View>
             </View>
         </SafeAreaView>
     )
