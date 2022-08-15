@@ -61,7 +61,9 @@ const styles = StyleSheet.create({
         marginHorizontal:10,
     },
     btnTextClouse:{
-        textTransform:'uppercase'
+        textTransform:'uppercase',
+        color: '#fff',
+        fontWeight:'bold',
     }
 });
 
