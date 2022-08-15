@@ -1,14 +1,23 @@
 import React, { useState } from 'react'
-import { View, Text, Pressable, TextInput } from 'react-native'
+import { View, Text, Pressable, TextInput, SafeAreaView } from 'react-native'
 import styles from '../Styles/FormBudget.jsx'
 
 const FormBudget = () => {
     return (
-        <View>
-            <Text>
-                FormBudget
-            </Text>
-        </View>
+        <SafeAreaView style={styles.container}>
+            <View>
+                <Pressable>
+                    <Text>
+                        Cancel
+                    </Text>
+                </Pressable>
+            </View>
+            <View>
+                <Text>
+
+                </Text>
+            </View>
+        </SafeAreaView>
     )
 }
 
