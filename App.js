@@ -3,6 +3,8 @@ import { StyleSheet, View, Alert, Pressable, Image } from 'react-native';
 import ControlBudget from './src/component/ControlBudget';
 import { Header } from './src/component/Header';
 import NewBudget from './src/component/NewBudget';
+import styles from '../Styles/StylesApp.jsx';
+
 
 export default function App() {
   const [valid, setValid] = useState(false);
@@ -56,14 +58,3 @@ export default function App() {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#f1f1f1f1',
-
-  },
-  header: {
-    backgroundColor: '#00000078',
-  },
-});
