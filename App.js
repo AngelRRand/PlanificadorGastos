@@ -49,6 +49,9 @@ export default function App() {
             <Modal
               animationType='slide'
               visible={modal}
+              onRequestClose={()=>{
+                setModal(!modal)
+              }}
             >
               <FormBudget
                 setModal={setModal}
