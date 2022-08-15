@@ -33,10 +33,21 @@ const FormBudget = () => {
 
                 <View style={styles.containerInput}>
                     <Text style={styles.laber}>Expense Category</Text>
-                    <Picker>
+                    <Picker
+                        style={styles.input}
+                    >
                         <Picker.Item label="--Selection--" value=""/>
+                        <Picker.Item label="Save money" value="Save"/>
+                        <Picker.Item label="Food" value="Food"/>
+                        <Picker.Item label="House" value="House"/>
+                        <Picker.Item label="Miscellaneous expenses" value="Expenses"/>
+                        <Picker.Item label="Leisure" value="Leisure"/>
+                        <Picker.Item label="Health" value="Health"/>
                     </Picker>
                 </View>
+                <Pressable>
+                    <Text>New Bills!!</Text>
+                </Pressable>
             </View>
         </SafeAreaView>
     )

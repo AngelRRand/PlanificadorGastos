@@ -6,10 +6,10 @@ const styles = StyleSheet.create({
         backgroundColor: '#3222c5f0',
 
     },
-    header: {
+    form: {
         backgroundColor: '#00000078',
     },
-    image:{
+    title:{
         width: 60,
         height: 60,
         position: 'absolute',
