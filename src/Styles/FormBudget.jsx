@@ -42,6 +42,15 @@ const styles = StyleSheet.create({
         padding: 10,
         borderRadius:10,
         marginTop:10
+    },
+    btnSubmit:{
+        backgroundColor:'#3b81f6',
+        marginTop:10,
+        padding: 10,
+    },
+    btnText:{
+        textAlign:'center'
+        
     }
 });
 
