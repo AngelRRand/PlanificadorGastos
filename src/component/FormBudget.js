@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { View, Text, Pressable, TextInput, SafeAreaView } from 'react-native'
+import { View, Text, Pressable, TextInput, SafeAreaView, Picker } from 'react-native'
 import styles from '../Styles/FormBudget.jsx'
 
 const FormBudget = () => {
@@ -29,6 +29,13 @@ const FormBudget = () => {
                         style={styles.input}
                         placeholder='Spending amount. ej. 700'
                     />
+                </View>
+
+                <View style={styles.containerInput}>
+                    <Text style={styles.laber}>Expense Category</Text>
+                    <Picker>
+
+                    </Picker>
                 </View>
             </View>
         </SafeAreaView>
