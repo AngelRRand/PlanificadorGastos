@@ -11,7 +11,11 @@ const styles = StyleSheet.create({
         backgroundColor: '#00000078',
     },
     image:{
-
+        width: 60,
+        height: 60,
+        position: 'absolute',
+        top: 120,
+        right: 20,
     },
 });
 

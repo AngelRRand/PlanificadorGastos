@@ -9,11 +9,8 @@ import styles from '../Styles/StylesApp.jsx';
 export default function App() {
   const [valid, setValid] = useState(false);
   const [budget, setBudget] = useState(0);
-  const [bills, setBills] = useState([
-    {id:1, amount:20},
-    {id:2, amount:30},
-    {id:3, amount:40},
-  ]);
+  const [bills, setBills] = useState([]);
+  const [modal, setModal] = useState(false)
   
   const handleBudget = (budget) => {
     if (Number(budget) > 0) {
