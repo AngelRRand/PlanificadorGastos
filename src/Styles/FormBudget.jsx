@@ -7,15 +7,42 @@ const styles = StyleSheet.create({
 
     },
     form: {
-        backgroundColor: '#00000078',
+        backgroundColor: 'white',
+        marginHorizontal: 30,
+        marginVertical: 10,
+        padding: 10,
+        borderRadius: 5,
+        transform: [{ translateY: 50 }],
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 1,
+        },
+        shadowOpacity: 0.22,
+        shadowRadius: 2.22,
+        elevation: 3,
     },
     title:{
-        width: 60,
-        height: 60,
-        position: 'absolute',
-        top: 120,
-        right: 20,
+        textAlign: 'center',
+        fontSize:28,
+        marginVertical:30,
+        color: '#64748b'
     },
+    containerInput:{
+        marginVertical:10,
+    },
+    label:{
+        color: '#555f6e',
+        textTransform:'uppercase',
+        fontSize:16,
+        fontWeight:'bold'
+    },
+    input:{
+        backgroundColor:'#f5f5f5f5',
+        padding: 10,
+        borderRadius:10,
+        marginTop:10
+    }
 });
 
 

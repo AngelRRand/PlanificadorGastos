@@ -16,7 +16,7 @@ const FormBudget = () => {
                 <Text style={title}>New Bills</Text>
 
                 <View style={styles.containerInput}>
-                    <Text style={styles.laber}>Expense name</Text>
+                    <Text style={styles.label}>Expense name</Text>
                     <TextInput
                         style={styles.input}
                         placeholder='Expense name. ej. Cine'
@@ -24,7 +24,7 @@ const FormBudget = () => {
                 </View>
 
                 <View style={styles.containerInput}>
-                    <Text style={styles.laber}>Amount spent</Text>
+                    <Text style={styles.label}>Amount spent</Text>
                     <TextInput
                         style={styles.input}
                         placeholder='Spending amount. ej. 700'
@@ -32,7 +32,7 @@ const FormBudget = () => {
                 </View>
 
                 <View style={styles.containerInput}>
-                    <Text style={styles.laber}>Expense Category</Text>
+                    <Text style={styles.label}>Expense Category</Text>
                     <Picker
                         style={styles.input}
                     >
