@@ -47,7 +47,8 @@ export default function App() {
         valid && (
           <Pressable>
             <Image
-              source={require('./')}
+              style={styles.image}
+              source={require('./src/IMG/nuevo-gasto.png')}
             />
           </Pressable>
         )
