@@ -31,7 +31,8 @@ export default function App() {
       return
     } 
     //Añadir el nuevo gasto al state
-    gasto.id = generatoID()
+    spent.id = generatoID()
+    setBills([...bills, spent])
   } 
 
 
