@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { View, Text, Pressable, TextInput, SafeAreaView, Picker } from 'react-native'
 import styles from '../Styles/FormBudget.jsx'
 
-const FormBudget = ({setModal}) => {
+const FormBudget = ({setModal, handlespent}) => {
 
     const [name, setName] = useState('');
     const [amount, setAmount] = useState('');
@@ -59,7 +59,15 @@ const FormBudget = ({setModal}) => {
                         <Picker.Item label="Health" value="Health"/>
                     </Picker>
                 </View>
-                <Pressable style={styles.btnSubmit}>
+                <Pressable 
+                    onPress={()=>{
+                        handlespent({
+                            name,
+                            amount,
+                            category
+                        })
+                    }}
+                    style={styles.btnSubmit}>
                     <Text style={styles.btnText}>New Bills!!</Text>
                 </Pressable>
             </View>
