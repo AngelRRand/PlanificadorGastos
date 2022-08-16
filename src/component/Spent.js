@@ -18,7 +18,10 @@ const Spent = ({ bill }) => {
   return (
     <View style={styles.container}>
       <View>
-
+        
+          <Image
+            source={icons[category]}
+          />
         <View>
           
           <Text>{category}</Text>
