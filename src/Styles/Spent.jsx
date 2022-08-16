@@ -18,6 +18,9 @@ const styles = StyleSheet.create({
         elevation: 3,
         marginBottom:20
     },
+    containerCount:{
+        
+    },
 })
 
 export default styles

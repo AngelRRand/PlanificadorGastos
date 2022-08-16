@@ -17,15 +17,16 @@ const Spent = ({ bill }) => {
   }
   return (
     <View style={styles.container}>
-      <View>
-        <View>
+      <View style={styles.containerCount}>
+        <View style={styles.containerImage}>
           <Image
+            style={styles.image}
             source={icons[category]}
           />
-          <View>
+          <View style={styles.containerText}>
 
-            <Text>{category}</Text>
-            <Text>{name}</Text>
+            <Text style={styles.category}>{category}</Text>
+            <Text style={styles.name}>{name}</Text>
 
           </View>
         </View>
