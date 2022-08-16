@@ -19,8 +19,23 @@ const styles = StyleSheet.create({
         marginBottom:20
     },
     containerCount:{
-        
+
     },
+    containerImage:{
+
+    },
+    image:{
+
+    },
+    containerText:{
+
+    },
+    category:{
+
+    },
+    name:{
+        
+    }
 })
 
 export default styles
