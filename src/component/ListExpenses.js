@@ -1,5 +1,6 @@
 import React from 'react'
 import { View, Text, Pressable, TextInput } from 'react-native'
+import Spent from './Spent'
 const ListExpenses = ({bills}) => {
   return (
     <View style={styles.container}>
@@ -9,9 +10,11 @@ const ListExpenses = ({bills}) => {
             ? 
             <Text style={styles.TextNotExp}>No hay gastos..</Text>
             :
-            bills.map(b => {
-                <Text></Text>
-            })
+            bills.map(b => (
+                <Spent
+                    bill={b}
+                />
+            ))
         }
     </View>
   )

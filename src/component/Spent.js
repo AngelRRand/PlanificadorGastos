@@ -1,8 +1,10 @@
 import React from 'react'
 import { View, Text, Pressable, TextInput } from 'react-native'
-const Spent = () => {
+const Spent = ({bill}) => {
   return (
-    <View>Spent</View>
+    <View>
+        <Text>{bill.name}</Text>
+    </View>
   )
 }
 
