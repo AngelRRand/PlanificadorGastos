@@ -7,7 +7,7 @@ const ListExpenses = ({bills}) => {
         {
             bills.length === 0 
             ? 
-            <Text style={styles.TextNotExp}>There are no expenses yet</Text>
+            <Text style={styles.TextNotExp}>No hay gastos..</Text>
             :
             bills.map(b => {
                 <Text></Text>
