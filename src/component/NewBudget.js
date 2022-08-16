@@ -1,5 +1,4 @@
 import React from 'react'
-import { useState } from 'react';
 import { View, Text, Pressable, TextInput } from 'react-native'
 import styles from '../Styles/NewBudget.jsx'
 const NewBudget = ({handleBudget, budget, setBudget}) => {
