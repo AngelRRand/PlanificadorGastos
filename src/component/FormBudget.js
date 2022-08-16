@@ -5,8 +5,8 @@ import styles from '../Styles/FormBudget.jsx'
 const FormBudget = ({setModal}) => {
 
     const [name, setName] = useState('');
-    const [Amount, setAmount] = useState('');
-    const [Category, setCategory] = useState('');
+    const [amount, setAmount] = useState('');
+    const [category, setCategory] = useState('');
 
     return (
         <SafeAreaView style={styles.container}>
@@ -35,6 +35,8 @@ const FormBudget = ({setModal}) => {
                 <View style={styles.containerInput}>
                     <Text style={styles.label}>Amount spent</Text>
                     <TextInput
+                        value={amount}
+                        onChangeText={setAmount}
                         style={styles.input}
                         placeholder='Spending amount. ej. 700'
                     />
