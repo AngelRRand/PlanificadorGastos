@@ -12,6 +12,7 @@ const ListExpenses = ({bills}) => {
             :
             bills.map(b => (
                 <Spent
+                    key={b.id}
                     bill={b}
                 />
             ))
