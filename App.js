@@ -21,6 +21,10 @@ export default function App() {
     }
   }
 
+  const handlespent = (spent)=>{
+
+  } 
+
 
   return (
     <View style={styles.container}>
@@ -55,6 +59,7 @@ export default function App() {
             >
               <FormBudget
                 setModal={setModal}
+                handlespent={handlespent}
               />
             </Modal>
           )
