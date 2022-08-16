@@ -1,11 +1,18 @@
 import React from 'react'
 import { View, Text, Pressable, Image } from 'react-native'
 import styles from '../Styles/Spent.jsx'
+import {formatQuantity} from '../helpers/index.js'
 
 const Spent = ({ bill }) => {
 
   const { name, category, amount, id } = bill
-
+  const icons = {
+    Save: require('../IMG/icono_ahorro.png'),
+    Food: require('../IMG/icono_comida.png'),
+    House: require('../IMG/icono_comida.png'),
+    Food: require('../IMG/icono_comida.png'),
+    Food: require('../IMG/icono_comida.png'),
+  }
   return (
     <View style={styles.container}>
       <View>
@@ -16,7 +23,7 @@ const Spent = ({ bill }) => {
           <Text>{name}</Text>
 
         </View>
-        <Text>{amount}</Text>
+        <Text>{formatQuantity(amount)}</Text>
 
 
       </View>
