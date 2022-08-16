@@ -9,13 +9,14 @@ const styles = StyleSheet.create({
     },
     header: {
         backgroundColor: '#00000078',
+        minHeight:400
     },
     image:{
         width: 60,
         height: 60,
         position: 'absolute',
-        top: 120,
-        right: 20,
+        bottom: 40,
+        right: 30,
     },
 });
 

@@ -40,7 +40,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <ScrollView>
-        <Header style={styles.header}/>
+        <Header style={styles.header} />
         {
           !valid ?
             <NewBudget
@@ -57,14 +57,14 @@ export default function App() {
             </>
         }
 
-      {
-        valid && (
-          <ListExpenses
-            bills={bills}
-          />
-        )
-      }
-
+        {
+          valid && (
+            <ListExpenses
+              bills={bills}
+            />
+          )
+        }
+      </ScrollView>
       {
         modal && (
           <Modal
@@ -92,7 +92,7 @@ export default function App() {
           </Pressable>
         )
       }
-      </ScrollView>
+
     </View>
   );
 }
