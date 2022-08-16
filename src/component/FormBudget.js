@@ -56,6 +56,7 @@ const FormBudget = ({setModal, handlespent}) => {
                         <Picker.Item label="House" value="House"/>
                         <Picker.Item label="Miscellaneous expenses" value="Expenses"/>
                         <Picker.Item label="Leisure" value="Leisure"/>
+                        <Picker.Item label="Subscription" value="Subscription"/>
                         <Picker.Item label="Health" value="Health"/>
                     </Picker>
                 </View>

@@ -9,9 +9,11 @@ const Spent = ({ bill }) => {
   const icons = {
     Save: require('../IMG/icono_ahorro.png'),
     Food: require('../IMG/icono_comida.png'),
-    House: require('../IMG/icono_comida.png'),
-    Food: require('../IMG/icono_comida.png'),
-    Food: require('../IMG/icono_comida.png'),
+    House: require('../IMG/icono_casa.png'),
+    Expenses: require('../IMG/icono_gastos.png'),
+    Leisure: require('../IMG/icono_ocio.png'),
+    Subscription: require('../IMG/icono_suscripciones.png'),
+    Health: require('../IMG/icono_salud.png'),
   }
   return (
     <View style={styles.container}>
