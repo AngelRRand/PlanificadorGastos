@@ -39,7 +39,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-
+      <ScrollView>
         <Header style={styles.header}/>
         {
           !valid ?
@@ -92,6 +92,7 @@ export default function App() {
           </Pressable>
         )
       }
+      </ScrollView>
     </View>
   );
 }
