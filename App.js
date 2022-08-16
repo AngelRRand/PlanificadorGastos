@@ -60,7 +60,9 @@ export default function App() {
 
       {
         valid && (
-          <ListExpenses/>
+          <ListExpenses
+            bills={bills}
+          />
         )
       }
 
