@@ -16,17 +16,8 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.22,
         shadowRadius: 2.22,
         elevation: 3,
+        marginBottom:20
     },
-    title:{
-        fontSize:30,
-        textAlign:'center',
-        fontWeight:700,
-    },
-    TextNotExp:{
-        marginTop:20,
-        textAlign:'center',
-        fontSize:20
-    }
 })
 
 export default styles
