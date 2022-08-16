@@ -1,9 +1,12 @@
 import React from 'react'
-import { View, Text, Pressable, TextInput } from 'react-native'
+import { View, Text, Pressable, Image } from 'react-native'
 const Spent = ({bill}) => {
+
+  const {name, category, amount, id} = bill
+
   return (
     <View>
-        <Text>{bill.name}</Text>
+        <Text>{name}</Text>
     </View>
   )
 }
