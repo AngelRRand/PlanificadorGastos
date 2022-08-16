@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Modal, View, Alert, Pressable, Image } from 'react-native';
 import { Header } from './src/component/Header';
+import {generatoID} from './src/helpers';
 import ControlBudget from './src/component/ControlBudget.js';
 import NewBudget from './src/component/NewBudget.js';
 import FormBudget from './src/component/FormBudget.js';
@@ -30,7 +31,7 @@ export default function App() {
       return
     } 
     //Añadir el nuevo gasto al state
-   
+    gasto.id = generatoID()
   } 
 
 
