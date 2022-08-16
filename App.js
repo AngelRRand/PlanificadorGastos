@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Modal, View, Alert, Pressable, Image } from 'react-native';
 import { Header } from './src/component/Header';
-import {generatoID} from './src/helpers';
+import { generatoID } from './src/helpers';
 import ControlBudget from './src/component/ControlBudget.js';
 import NewBudget from './src/component/NewBudget.js';
 import FormBudget from './src/component/FormBudget.js';
@@ -13,7 +13,7 @@ export default function App() {
   const [budget, setBudget] = useState(0);
   const [bills, setBills] = useState([]);
   const [modal, setModal] = useState(false)
-  
+
   const handleBudget = (budget) => {
     if (Number(budget) > 0) {
       setValid(true)
@@ -22,18 +22,18 @@ export default function App() {
     }
   }
 
-  const handlespent = (spent)=>{
-    if(Object.values(spent).includes('')){
+  const handlespent = (spent) => {
+    if (Object.values(spent).includes('')) {
       Alert.alert(
         'Error',
         'Todos los campos son oblidatorios'
       )
       return
-    } 
+    }
     //Añadir el nuevo gasto al state
     spent.id = generatoID()
     setBills([...bills, spent])
-  } 
+  }
 
 
   return (
@@ -49,35 +49,42 @@ export default function App() {
             />
             :
             <>
-            <ControlBudget
-            budget={budget}
-            bills={bills}
-            />
-            
+              <ControlBudget
+                budget={budget}
+                bills={bills}
+              />
             </>
         }
       </View>
 
-        {
-          modal && (
-            <Modal
-              animationType='slide'
-              visible={modal}
-              onRequestClose={()=>{
-                setModal(!modal)
-              }}
-            >
-              <FormBudget
-                setModal={setModal}
-                handlespent={handlespent}
-              />
-            </Modal>
-          )
-        }
+      {
+        valid && (
+          <Text>
+            
+          </Text>
+        )
+      }
+
+      {
+        modal && (
+          <Modal
+            animationType='slide'
+            visible={modal}
+            onRequestClose={() => {
+              setModal(!modal)
+            }}
+          >
+            <FormBudget
+              setModal={setModal}
+              handlespent={handlespent}
+            />
+          </Modal>
+        )
+      }
 
       {
         valid && (
-          <Pressable onPress={()=> setModal(!modal)}>
+          <Pressable onPress={() => setModal(!modal)}>
             <Image
               style={styles.image}
               source={require('./src/IMG/nuevo-gasto.png')}
