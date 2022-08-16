@@ -28,9 +28,10 @@ export default function App() {
         'Todos los campos son oblidatorios'
       )
       return
-    } else{
-
-    }
+    } 
+    //Añadir el nuevo gasto al state
+    const random = Math.ramdom().toString(36).substring(2, 11)
+    const day = Date.now().toString(36)
   } 
 
 
