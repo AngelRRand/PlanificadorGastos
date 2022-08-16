@@ -22,7 +22,11 @@ export default function App() {
   }
 
   const handlespent = (spent)=>{
-    spent
+    if(Object.values(spent).includes('')){
+
+    } else{
+      
+    }
   } 
 
 
