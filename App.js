@@ -22,7 +22,7 @@ export default function App() {
   }
 
   const handlespent = (spent)=>{
-
+    spent
   } 
 
 
