@@ -5,6 +5,7 @@ import { generatoID } from './src/helpers';
 import ControlBudget from './src/component/ControlBudget.js';
 import NewBudget from './src/component/NewBudget.js';
 import FormBudget from './src/component/FormBudget.js';
+import ListExpenses from './src/component/ListExpenses';
 import styles from '../Styles/StylesApp.jsx';
 
 
@@ -59,9 +60,7 @@ export default function App() {
 
       {
         valid && (
-          <Text>
-            
-          </Text>
+          <ListExpenses/>
         )
       }
 
