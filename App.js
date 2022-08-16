@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Modal, View, Alert, Pressable, Image } from 'react-native';
+import { Modal, View, Alert, Pressable, Image, ScrollView } from 'react-native';
 import { Header } from './src/component/Header';
 import { generatoID } from './src/helpers';
 import ControlBudget from './src/component/ControlBudget.js';
@@ -39,8 +39,8 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <View>
-        <Header style={styles.header}></Header>
+
+        <Header style={styles.header}/>
         {
           !valid ?
             <NewBudget
@@ -56,7 +56,6 @@ export default function App() {
               />
             </>
         }
-      </View>
 
       {
         valid && (
