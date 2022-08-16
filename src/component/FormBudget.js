@@ -3,6 +3,11 @@ import { View, Text, Pressable, TextInput, SafeAreaView, Picker } from 'react-na
 import styles from '../Styles/FormBudget.jsx'
 
 const FormBudget = ({setModal}) => {
+
+    const [name, setName] = useState('');
+    const [Amount, setAmount] = useState('');
+    const [Category, setCategory] = useState('');
+
     return (
         <SafeAreaView style={styles.container}>
             <View>
@@ -20,6 +25,8 @@ const FormBudget = ({setModal}) => {
                 <View style={styles.containerInput}>
                     <Text style={styles.label}>Expense name</Text>
                     <TextInput
+                        value={name}
+                        onChangeText={setName}
                         style={styles.input}
                         placeholder='Expense name. ej. Cine'
                     />
