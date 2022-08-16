@@ -45,7 +45,10 @@ const FormBudget = ({setModal}) => {
                 <View style={styles.containerInput}>
                     <Text style={styles.label}>Expense Category</Text>
                     <Picker
-                        style={styles.input}
+                        selectValue={category}
+                        onValueChange={(itemVal)=>{
+                            setCategory(itemVal)
+                        }}
                     >
                         <Picker.Item label="--Selection--" value=""/>
                         <Picker.Item label="Save money" value="Save"/>
