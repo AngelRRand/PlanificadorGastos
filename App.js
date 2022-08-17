@@ -32,7 +32,8 @@ export default function App() {
       return
     }
     //Añadir el nuevo gasto al state
-    spent.id = generatoID()
+    spent.id = generatoID();
+    spent.day = Date.now()
     setBills([...bills, spent])
   }
 

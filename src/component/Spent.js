@@ -5,7 +5,7 @@ import { formatQuantity } from '../helpers/index.js'
 
 const Spent = ({ bill }) => {
 
-  const { name, category, amount, id } = bill
+  const { name, category, amount, day } = bill
   const icons = {
     Save: require('../IMG/icono_ahorro.png'),
     Food: require('../IMG/icono_comida.png'),
@@ -27,6 +27,7 @@ const Spent = ({ bill }) => {
 
             <Text style={styles.category}>{category}</Text>
             <Text style={styles.name}>{name}</Text>
+            <Text style={styles.name}>Day: {day}</Text>
 
           </View>
         </View>
