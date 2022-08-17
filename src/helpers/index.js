@@ -9,8 +9,10 @@ export const formatDay = day =>{
     const dayNew = new Date(day)
     const option = {
         year: 'numeric',
-        
+        month: 'short',
+        day: '2-digit'
     }
+    return dayNew.toLocaleString('es-ES', option)
 }
 export const generatoID = ()=>{
     const random = Math.ramdom().toString(36).substring(2, 11)
