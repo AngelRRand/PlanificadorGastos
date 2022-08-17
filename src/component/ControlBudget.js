@@ -14,7 +14,7 @@ const ControlBudget = ({budget, bills}) => {
 
         setAvailable(availableTotal)
         setSpent(totalSpent)
-    }, [])
+    }, [bills])
 
 
     return (
