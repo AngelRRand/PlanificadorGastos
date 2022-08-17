@@ -27,16 +27,16 @@ const FormBudget = ({setModal, handlespent, setSpent, spent}) => {
                         setSpent({})
                     }
                     }
-                    style={[styles.btnClouse]}>
-                    <Text style={styles.btnTextClouse}>
+                    style={[styles.btn,styles.btnClouse]}>
+                    <Text style={styles.btnText}>
                         Cancel
                     </Text>
                 </Pressable>
 
                 <Pressable
                     
-                    style={styles.btnClouse}>
-                    <Text style={styles.btnTextClouse}>
+                    style={[styles.btn, styles.btnEliminar]}>
+                    <Text style={styles.btnText}>
                         Delet
                     </Text>
                 </Pressable>
