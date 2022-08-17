@@ -51,9 +51,8 @@ export default function App() {
       [
         {text: 'No', style:'cancel'},
         {text:'Si, Eliminar', onPress: ()=>{
-          const spentUpdates = bills.filter(state =>
-            state !== id
-            )
+          const spentUpdates = bills.filter(state =>state !== id)
+          setBills(spentUpdates)
         }}
       ]
     )
