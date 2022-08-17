@@ -1,15 +1,17 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import { View, Text, Image } from 'react-native'
 import { formatQuantity } from '../helpers/index.js'
 import styles from '../Styles/ControlBudget.jsx'
-const ControlBudget = ({budget, bills}) => {
+import CircularProgress from 'react-native-circular-progress-indicator';
+const ControlBudget = ({ budget, bills }) => {
 
     const [available, setAvailable] = useState(0);
     const [spent, setSpent] = useState(0);
+    const [value, setValue] = useState(0);
 
 
-    useEffect(()=>{
-        const totalSpent = bills.reduce((total, spent)=> Number(spent.amount) + total, 0)
+    useEffect(() => {
+        const totalSpent = bills.reduce((total, spent) => Number(spent.amount) + total, 0)
         const availableTotal = budget - totalSpent
 
         setAvailable(availableTotal)
@@ -20,9 +22,16 @@ const ControlBudget = ({budget, bills}) => {
     return (
         <View style={styles.container}>
             <View style={styles.center}>
-                <Image 
-                    source={require('../IMG/grafico.jpg')}
-                    style={styles.img}
+                <CircularProgress
+                    value={value}
+                    radius={120}
+                    duration={2000}
+                    progressValueColor={'#ecf0f1'}
+                    maxValue={100}
+                    valueSuffix={'%'}
+                    title={'Gasto'}
+                    titleColor={'white'}
+                    titleStyle={{ fontWeight: 'bold' }}
                 />
             </View>
             <View style={styles.containerText}>
