@@ -3,7 +3,7 @@ import { View, Text, Pressable, Image } from 'react-native'
 import styles from '../Styles/Spent.jsx'
 import { formatQuantity, formatDay } from '../helpers/index.js'
 
-const Spent = ({ bill, setModal }) => {
+const Spent = ({ bill, setModal, setSpent }) => {
 
   const { name, category, amount, day } = bill
   const icons = {
@@ -18,6 +18,7 @@ const Spent = ({ bill, setModal }) => {
 
   const handleActions = ()=>{
     setModal(true)
+    setSpent(bill)
   }
   return (
     <Pressable
