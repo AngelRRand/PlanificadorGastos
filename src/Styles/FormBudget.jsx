@@ -54,13 +54,19 @@ const styles = StyleSheet.create({
         fontWeight:'bold',
         textTransform:'uppercase'
     },
-    btnClouse:{
+    btn:{
+
+    },
+    btnClose:{
         backgroundColor:'#db2777',
         marginTop:10,
         padding: 10,
         marginHorizontal:10,
     },
-    btnTextClouse:{
+    btnEliminar:{
+
+    },
+    btnTextTop:{
         textTransform:'uppercase',
         color: '#fff',
         fontWeight:'bold',

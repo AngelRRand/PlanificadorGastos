@@ -27,8 +27,8 @@ const FormBudget = ({setModal, handlespent, setSpent, spent}) => {
                         setSpent({})
                     }
                     }
-                    style={[styles.btn,styles.btnClouse]}>
-                    <Text style={styles.btnText}>
+                    style={[styles.btn,styles.btnClose]}>
+                    <Text style={styles.btnTextTop}>
                         Cancel
                     </Text>
                 </Pressable>
