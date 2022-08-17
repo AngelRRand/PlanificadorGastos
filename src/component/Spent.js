@@ -1,7 +1,7 @@
 import React from 'react'
 import { View, Text, Pressable, Image } from 'react-native'
 import styles from '../Styles/Spent.jsx'
-import { formatQuantity } from '../helpers/index.js'
+import { formatQuantity, formatDay } from '../helpers/index.js'
 
 const Spent = ({ bill }) => {
 
@@ -27,7 +27,7 @@ const Spent = ({ bill }) => {
 
             <Text style={styles.category}>{category}</Text>
             <Text style={styles.name}>{name}</Text>
-            <Text style={styles.name}>Day: {day}</Text>
+            <Text style={styles.name}>Day: {formatDay(day)}</Text>
 
           </View>
         </View>

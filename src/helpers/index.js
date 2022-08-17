@@ -8,7 +8,7 @@ export const formatQuantity = (quantity) =>{
 export const formatDay = day =>{
     const dayNew = new Date(day)
     const option = {
-        year: 'numeric',
+        year: '2-digit',
         month: 'short',
         day: '2-digit'
     }
