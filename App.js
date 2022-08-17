@@ -44,7 +44,9 @@ export default function App() {
 
     setModal(!modal)
   }
+  const deletSpent = id=>{
 
+  }
 
   return (
     <View style={styles.container}>
@@ -90,6 +92,7 @@ export default function App() {
               handlespent={handlespent}
               setSpent={setSpent}
               spent={spent}
+              deletSpent={deletSpent}
             />
           </Modal>
         )

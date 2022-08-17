@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { View, Text, Pressable, TextInput, SafeAreaView, Picker } from 'react-native'
 import styles from '../Styles/FormBudget.jsx'
 
-const FormBudget = ({setModal, handlespent, setSpent, spent}) => {
+const FormBudget = ({setModal, handlespent, setSpent, spent, deletSpent}) => {
 
     const [name, setName] = useState('');
     const [amount, setAmount] = useState('');
@@ -34,7 +34,9 @@ const FormBudget = ({setModal, handlespent, setSpent, spent}) => {
                 </Pressable>
 
                 <Pressable
-                    
+                    onLongPress={()=>{
+                        deletSpent(id)
+                    }}
                     style={[styles.btn, styles.btnEliminar]}>
                     <Text style={styles.btnText}>
                         Delet
