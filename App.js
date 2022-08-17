@@ -33,12 +33,16 @@ export default function App() {
       return
     }
     if(spent.id){
-      
+      const spentUpdates = bills.map(stateBills => stateBills.id === spent.id ? spent : stateBills)
+      setBills(spentUpdates)
+    }else{
+      //Añadir el nuevo gasto al state
+      spent.id = generatoID();
+      spent.day = Date.now()
+      setBills([...bills, spent])
     }
-    //Añadir el nuevo gasto al state
-    spent.id = generatoID();
-    spent.day = Date.now()
-    setBills([...bills, spent])
+
+    setModal(!modal)
   }
 
 
