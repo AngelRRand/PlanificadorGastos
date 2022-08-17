@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { View, Text, Pressable, TextInput, SafeAreaView, Picker } from 'react-native'
+import {Picker} from '@react-native-picker/picker';
 import styles from '../Styles/FormBudget.jsx'
 
 const FormBudget = ({ setModal, handlespent, setSpent, spent, deletSpent }) => {
