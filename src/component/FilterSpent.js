@@ -4,7 +4,7 @@ import {Picker} from '@react-native-picker/picker';
 const FilterSpent = () => {
   return (
     <View style={styles.container}>
-        <Text>Filter Spent</Text>
+        <Text style={styles.label}>Filter Spent</Text>
     </View>
   )
 }

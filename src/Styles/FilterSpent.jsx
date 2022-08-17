@@ -17,6 +17,11 @@ const styles = StyleSheet.create({
         shadowRadius: 2.22,
         elevation: 3,
     },
+    laber:{
+        fontSize:22,
+        fontWeight:'900',
+        color: 'black',
+    }
 
 });
 
