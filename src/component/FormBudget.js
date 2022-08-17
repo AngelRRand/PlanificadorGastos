@@ -1,13 +1,17 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { View, Text, Pressable, TextInput, SafeAreaView, Picker } from 'react-native'
 import styles from '../Styles/FormBudget.jsx'
 
-const FormBudget = ({setModal, handlespent, setSpent}) => {
+const FormBudget = ({setModal, handlespent, setSpent, spent}) => {
 
     const [name, setName] = useState('');
     const [amount, setAmount] = useState('');
     const [category, setCategory] = useState('');
-
+    useEffect(()=>{
+        if(spent?.name){
+            
+        }
+    },[spent])
     return (
         <SafeAreaView style={styles.container}>
             <View>

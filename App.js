@@ -82,6 +82,7 @@ export default function App() {
               setModal={setModal}
               handlespent={handlespent}
               setSpent={setSpent}
+              spent={spent}
             />
           </Modal>
         )
