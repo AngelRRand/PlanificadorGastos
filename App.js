@@ -25,12 +25,15 @@ export default function App() {
   }
 
   const handlespent = (spent) => {
-    if (Object.values(spent).includes('')) {
+    if ([spent.name, spent.category, spent.amount].includes('') ) {
       Alert.alert(
         'Error',
         'Todos los campos son oblidatorios'
       )
       return
+    }
+    if(spent.id){
+      
     }
     //Añadir el nuevo gasto al state
     spent.id = generatoID();
