@@ -30,9 +30,7 @@ const Spent = ({ bill }) => {
 
           </View>
         </View>
-        <Text>{formatQuantity(amount)}</Text>
-
-
+        <Text style={styles.amount}>{formatQuantity(amount)}</Text>
       </View>
     </View>
   )

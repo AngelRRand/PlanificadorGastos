@@ -47,6 +47,10 @@ const styles = StyleSheet.create({
         fontSize:22,
         color:'#6c6f74',
         marginBottom:5,
+    },
+    amount:{
+        fontSize:22,
+        fontWeight:'700',
     }
 })
 
