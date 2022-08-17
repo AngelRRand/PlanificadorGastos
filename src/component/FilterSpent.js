@@ -3,7 +3,9 @@ import { View, Text, Pressable, Image } from 'react-native'
 import {Picker} from '@react-native-picker/picker';
 const FilterSpent = () => {
   return (
-    <View>FilterSpent</View>
+    <View style={styles.container}>
+        <Text>Filter Spent</Text>
+    </View>
   )
 }
 

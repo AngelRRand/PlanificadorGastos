@@ -5,7 +5,8 @@ import { generatoID } from './src/helpers';
 import ControlBudget from './src/component/ControlBudget.js';
 import NewBudget from './src/component/NewBudget.js';
 import FormBudget from './src/component/FormBudget.js';
-import ListExpenses from './src/component/ListExpenses';
+import ListExpenses from './src/component/ListExpenses.js';
+import FilterSpent from './src/component/FilterSpent.js';
 import styles from '../Styles/StylesApp.jsx';
 
 
@@ -112,6 +113,8 @@ export default function App() {
 
       {
         valid && (
+          <>
+          <FilterSpent/>
           <Pressable 
             style={styles.press}
             onPress={() => setModal(!modal)}>
@@ -120,6 +123,7 @@ export default function App() {
               source={require('./src/IMG/nuevo-gasto.png')}
             />
           </Pressable>
+          </>
         )
       }
 
