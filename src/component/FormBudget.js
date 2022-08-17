@@ -7,9 +7,13 @@ const FormBudget = ({setModal, handlespent, setSpent, spent}) => {
     const [name, setName] = useState('');
     const [amount, setAmount] = useState('');
     const [category, setCategory] = useState('');
+    const [id, setId] = useState('');
     useEffect(()=>{
         if(spent?.name){
-            
+            setName(spent.name)
+            setAmount(spent.amount)
+            setCategory(spent.category)
+            setId(spent.id)
         }
     },[spent])
     return (
