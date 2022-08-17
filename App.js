@@ -53,6 +53,8 @@ export default function App() {
         {text:'Si, Eliminar', onPress: ()=>{
           const spentUpdates = bills.filter(state =>state !== id)
           setBills(spentUpdates)
+          setModal(!modal)
+          setModal({})
         }}
       ]
     )
