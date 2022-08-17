@@ -112,7 +112,9 @@ export default function App() {
 
       {
         valid && (
-          <Pressable onPress={() => setModal(!modal)}>
+          <Pressable 
+            style={styles.press}
+            onPress={() => setModal(!modal)}>
             <Image
               style={styles.image}
               source={require('./src/IMG/nuevo-gasto.png')}
