@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { View, Text, Pressable, TextInput, SafeAreaView, Picker } from 'react-native'
 import styles from '../Styles/FormBudget.jsx'
 
-const FormBudget = ({setModal, handlespent}) => {
+const FormBudget = ({setModal, handlespent, setSpent}) => {
 
     const [name, setName] = useState('');
     const [amount, setAmount] = useState('');
@@ -12,7 +12,11 @@ const FormBudget = ({setModal, handlespent}) => {
         <SafeAreaView style={styles.container}>
             <View>
                 <Pressable
-                    onLongPress={()=>setModal(false)}
+                    onLongPress={()=>{
+                        setModal(false)
+                        setSpent({})
+                    }
+                    }
                     style={styles.btnClouse}>
                     <Text style={styles.btnTextClouse}>
                         Cancel

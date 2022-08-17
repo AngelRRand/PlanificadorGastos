@@ -81,6 +81,7 @@ export default function App() {
             <FormBudget
               setModal={setModal}
               handlespent={handlespent}
+              setSpent={setSpent}
             />
           </Modal>
         )
