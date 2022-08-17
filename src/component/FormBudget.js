@@ -2,46 +2,50 @@ import React, { useState, useEffect } from 'react'
 import { View, Text, Pressable, TextInput, SafeAreaView, Picker } from 'react-native'
 import styles from '../Styles/FormBudget.jsx'
 
-const FormBudget = ({setModal, handlespent, setSpent, spent, deletSpent}) => {
+const FormBudget = ({ setModal, handlespent, setSpent, spent, deletSpent }) => {
 
     const [name, setName] = useState('');
     const [amount, setAmount] = useState('');
     const [category, setCategory] = useState('');
     const [day, setDay] = useState('');
     const [id, setId] = useState('');
-    useEffect(()=>{
-        if(spent?.name){
+    useEffect(() => {
+        if (spent?.name) {
             setName(spent.name)
             setAmount(spent.amount)
             setCategory(spent.category)
             setDay(spent.day)
             setId(spent.id)
         }
-    },[spent])
+    }, [spent])
     return (
         <SafeAreaView style={styles.container}>
             <View style={btnDeletClose}>
                 <Pressable
-                    onLongPress={()=>{
+                    onLongPress={() => {
                         setModal(false)
                         setSpent({})
                     }
                     }
-                    style={[styles.btn,styles.btnClose]}>
+                    style={[styles.btn, styles.btnClose]}>
                     <Text style={styles.btnTextTop}>
                         Cancel
                     </Text>
                 </Pressable>
+                {
+                    !!id && (
+                        <Pressable
+                            onLongPress={() => {
+                                deletSpent(id)
+                            }}
+                            style={[styles.btn, styles.btnEliminar]}>
+                            <Text style={styles.btnText}>
+                                Delet
+                            </Text>
+                        </Pressable>
 
-                <Pressable
-                    onLongPress={()=>{
-                        deletSpent(id)
-                    }}
-                    style={[styles.btn, styles.btnEliminar]}>
-                    <Text style={styles.btnText}>
-                        Delet
-                    </Text>
-                </Pressable>
+                    )
+                }
             </View>
             <View style={form}>
                 <Text style={title}>{spent?.name ? 'Edit Bills' : 'New Bills'}</Text>
@@ -70,22 +74,22 @@ const FormBudget = ({setModal, handlespent, setSpent, spent, deletSpent}) => {
                     <Text style={styles.label}>Expense Category</Text>
                     <Picker
                         selectValue={category}
-                        onValueChange={(itemVal)=>{
+                        onValueChange={(itemVal) => {
                             setCategory(itemVal)
                         }}
                     >
-                        <Picker.Item label="--Selection--" value=""/>
-                        <Picker.Item label="Save money" value="Save"/>
-                        <Picker.Item label="Food" value="Food"/>
-                        <Picker.Item label="House" value="House"/>
-                        <Picker.Item label="Miscellaneous expenses" value="Expenses"/>
-                        <Picker.Item label="Leisure" value="Leisure"/>
-                        <Picker.Item label="Subscription" value="Subscription"/>
-                        <Picker.Item label="Health" value="Health"/>
+                        <Picker.Item label="--Selection--" value="" />
+                        <Picker.Item label="Save money" value="Save" />
+                        <Picker.Item label="Food" value="Food" />
+                        <Picker.Item label="House" value="House" />
+                        <Picker.Item label="Miscellaneous expenses" value="Expenses" />
+                        <Picker.Item label="Leisure" value="Leisure" />
+                        <Picker.Item label="Subscription" value="Subscription" />
+                        <Picker.Item label="Health" value="Health" />
                     </Picker>
                 </View>
-                <Pressable 
-                    onPress={()=>{
+                <Pressable
+                    onPress={() => {
                         handlespent({
                             name,
                             amount,
