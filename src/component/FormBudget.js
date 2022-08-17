@@ -20,16 +20,24 @@ const FormBudget = ({setModal, handlespent, setSpent, spent}) => {
     },[spent])
     return (
         <SafeAreaView style={styles.container}>
-            <View>
+            <View style={btnDeletClose}>
                 <Pressable
                     onLongPress={()=>{
                         setModal(false)
                         setSpent({})
                     }
                     }
-                    style={styles.btnClouse}>
+                    style={[styles.btnClouse]}>
                     <Text style={styles.btnTextClouse}>
                         Cancel
+                    </Text>
+                </Pressable>
+
+                <Pressable
+                    
+                    style={styles.btnClouse}>
+                    <Text style={styles.btnTextClouse}>
+                        Delet
                     </Text>
                 </Pressable>
             </View>
