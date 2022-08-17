@@ -14,6 +14,10 @@ const ControlBudget = ({ budget, bills }) => {
         const totalSpent = bills.reduce((total, spent) => Number(spent.amount) + total, 0)
         const availableTotal = budget - totalSpent
 
+        const UpdateValue = (
+            ((available - availableTotal / budget) * 100)
+        )
+        setValue(UpdateValue)
         setAvailable(availableTotal)
         setSpent(totalSpent)
     }, [bills])
