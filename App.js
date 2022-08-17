@@ -14,6 +14,7 @@ export default function App() {
   const [budget, setBudget] = useState(0);
   const [bills, setBills] = useState([]);
   const [modal, setModal] = useState(false)
+  const [spent, setSpent] = useState({})
 
   const handleBudget = (budget) => {
     if (Number(budget) > 0) {
@@ -63,6 +64,7 @@ export default function App() {
             <ListExpenses
               bills={bills}
               setModal={setModal}
+              setSpent={setSpent}
             />
           )
         }
