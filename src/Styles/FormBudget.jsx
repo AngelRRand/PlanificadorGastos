@@ -54,16 +54,20 @@ const styles = StyleSheet.create({
         fontWeight:'bold',
         textTransform:'uppercase'
     },
+    btnDeletClose:{
+        flexDirection:'row',
+        justifyContent:'space-between'
+    },
     btn:{
         marginTop:10,
         padding: 10,
-        marginHorizontal:10,
+        width: '50%',
     },
     btnClose:{
         backgroundColor:'#db2777',
     },
     btnEliminar:{
-
+        backgroundColor:'#e91520',
     },
     btnTextTop:{
         textTransform:'uppercase',
