@@ -62,6 +62,7 @@ const styles = StyleSheet.create({
         marginTop:10,
         padding: 10,
         width: '50%',
+        flex: 1,
     },
     btnClose:{
         backgroundColor:'#db2777',
