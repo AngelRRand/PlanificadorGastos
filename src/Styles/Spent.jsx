@@ -51,6 +51,10 @@ const styles = StyleSheet.create({
     amount:{
         fontSize:22,
         fontWeight:'700',
+    },
+    day:{
+        fontWeight:'700',
+        color:'#d66481',
     }
 })
 
