@@ -45,7 +45,18 @@ export default function App() {
     setModal(!modal)
   }
   const deletSpent = id=>{
-
+    Alert.alert(
+      '¿Deseas eliminar este gasto?',
+      'Un gasto eliminado no se puede recuperar',
+      [
+        {text: 'No', style:'cancel'},
+        {text:'Si, Eliminar', onPress: ()=>{
+          const spentUpdates = bills.filter(state =>
+            state !== id
+            )
+        }}
+      ]
+    )
   }
 
   return (
