@@ -32,7 +32,7 @@ const FormBudget = ({setModal, handlespent, setSpent, spent}) => {
                 </Pressable>
             </View>
             <View style={form}>
-                <Text style={title}>New Bills</Text>
+                <Text style={title}>{spent?.name ? 'Edit Bills' : 'New Bills'}</Text>
 
                 <View style={styles.containerInput}>
                     <Text style={styles.label}>Expense name</Text>
@@ -81,7 +81,7 @@ const FormBudget = ({setModal, handlespent, setSpent, spent}) => {
                         })
                     }}
                     style={styles.btnSubmit}>
-                    <Text style={styles.btnText}>New Bills!!</Text>
+                    <Text style={styles.btnText}>{spent?.name ? 'Save Bill' : 'New Bills!!'} </Text>
                 </Pressable>
             </View>
         </SafeAreaView>
