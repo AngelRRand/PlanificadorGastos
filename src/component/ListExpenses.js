@@ -1,7 +1,7 @@
 import React from 'react'
 import { View, Text, Pressable, TextInput } from 'react-native'
 import Spent from './Spent'
-const ListExpenses = ({bills}) => {
+const ListExpenses = ({bills, setModal}) => {
   return (
     <View style={styles.container}>
         <Text style={styles.title}>Expenses</Text>
@@ -14,6 +14,7 @@ const ListExpenses = ({bills}) => {
                 <Spent
                     key={b.id}
                     bill={b}
+                    setModal={setModal}
                 />
             ))
         }

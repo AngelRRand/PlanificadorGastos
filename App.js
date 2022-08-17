@@ -62,6 +62,7 @@ export default function App() {
           valid && (
             <ListExpenses
               bills={bills}
+              setModal={setModal}
             />
           )
         }
