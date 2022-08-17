@@ -9,7 +9,7 @@ export const formatDay = day =>{
     const dayNew = new Date(day)
     const option = {
         year: '2-digit',
-        month: 'short',
+        month: '2-digit',
         day: '2-digit'
     }
     return dayNew.toLocaleString('es-ES', option)

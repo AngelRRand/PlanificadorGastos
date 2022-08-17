@@ -27,7 +27,7 @@ const Spent = ({ bill }) => {
 
             <Text style={styles.category}>{category}</Text>
             <Text style={styles.name}>{name}</Text>
-            <Text style={styles.name}>Day: {formatDay(day)}</Text>
+            <Text style={styles.day}>{formatDay(day)}</Text>
 
           </View>
         </View>
