@@ -5,7 +5,13 @@ export const formatQuantity = (quantity) =>{
         currency:'USD'
     }
 }
-
+export const formatDay = day =>{
+    const dayNew = new Date(day)
+    const option = {
+        year: 'numeric',
+        
+    }
+}
 export const generatoID = ()=>{
     const random = Math.ramdom().toString(36).substring(2, 11)
     const day = Date.now().toString(36)
