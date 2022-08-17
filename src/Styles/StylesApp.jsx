@@ -14,10 +14,14 @@ const styles = StyleSheet.create({
     image:{
         width: 60,
         height: 60,
+    },
+    press:{
+        width: 60,
+        height: 60,
         position: 'absolute',
         bottom: 40,
         right: 30,
-    },
+    }
 });
 
 
