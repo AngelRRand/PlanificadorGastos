@@ -1,11 +1,15 @@
 import React from 'react'
 import { View, Text, Pressable, Image } from 'react-native'
 import { Picker } from '@react-native-picker/picker';
-const FilterSpent = () => {
+const FilterSpent = ({spentFilter, setSpentFilter}) => {
     return (
         <View style={styles.container}>
             <Text style={styles.label}>Filter Spent</Text>
             <Picker
+                selectedValue={spentFilter}
+                onValueChange={(value)=>{
+                    spentFilter(value)
+                }}
             >
                 <Picker.Item label="--Selection--" value="" />
                 <Picker.Item label="Save money" value="Save" />
