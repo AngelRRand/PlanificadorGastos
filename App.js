@@ -28,17 +28,17 @@ export default function App() {
   }
 
   const handlespent = (spent) => {
-    if ([spent.name, spent.category, spent.amount].includes('') ) {
+    if ([spent.name, spent.category, spent.amount].includes('')) {
       Alert.alert(
         'Error',
         'Todos los campos son oblidatorios'
       )
       return
     }
-    if(spent.id){
+    if (spent.id) {
       const spentUpdates = bills.map(stateBills => stateBills.id === spent.id ? spent : stateBills)
       setBills(spentUpdates)
-    }else{
+    } else {
       //Añadir el nuevo gasto al state
       spent.id = generatoID();
       spent.day = Date.now()
@@ -47,18 +47,20 @@ export default function App() {
 
     setModal(!modal)
   }
-  const deletSpent = id=>{
+  const deletSpent = id => {
     Alert.alert(
       '¿Deseas eliminar este gasto?',
       'Un gasto eliminado no se puede recuperar',
       [
-        {text: 'No', style:'cancel'},
-        {text:'Si, Eliminar', onPress: ()=>{
-          const spentUpdates = bills.filter(state =>state !== id)
-          setBills(spentUpdates)
-          setModal(!modal)
-          setModal({})
-        }}
+        { text: 'No', style: 'cancel' },
+        {
+          text: 'Si, Eliminar', onPress: () => {
+            const spentUpdates = bills.filter(state => state !== id)
+            setBills(spentUpdates)
+            setModal(!modal)
+            setModal({})
+          }
+        }
       ]
     )
   }
@@ -85,11 +87,21 @@ export default function App() {
 
         {
           valid && (
+            <>
+            <FilterSpent
+              filtro={filtro}
+              setFiltro={setFiltro}
+              bills={bills}
+              setBillsFilter={setBillsFilter}
+            />
             <ListExpenses
               bills={bills}
               setModal={setModal}
               setSpent={setSpent}
+              filtro={filtro}
+              billsFilter={billsFilter}
             />
+            </>
           )
         }
       </ScrollView>
@@ -116,20 +128,14 @@ export default function App() {
       {
         valid && (
           <>
-          <FilterSpent 
-          filtro={filtro} 
-          setFiltro={setFiltro}
-          bills={bills}
-          setBillsFilter={setBillsFilter}
-          />
-          <Pressable 
-            style={styles.press}
-            onPress={() => setModal(!modal)}>
-            <Image
-              style={styles.image}
-              source={require('./src/IMG/nuevo-gasto.png')}
-            />
-          </Pressable>
+            <Pressable
+              style={styles.press}
+              onPress={() => setModal(!modal)}>
+              <Image
+                style={styles.image}
+                source={require('./src/IMG/nuevo-gasto.png')}
+              />
+            </Pressable>
           </>
         )
       }
