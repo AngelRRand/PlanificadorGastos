@@ -15,8 +15,9 @@ export default function App() {
   const [budget, setBudget] = useState(0);
   const [bills, setBills] = useState([]);
   const [modal, setModal] = useState(false)
-  const [spent, setSpent] = useState({})
-  const [spentFilter, setSpentFilter] = useState({})
+  const [spent, setSpent] = useState({});
+  const [filtro, setFiltro] = useState('');
+  const [billsFilter, setBillsFilter] = useState([]);
 
   const handleBudget = (budget) => {
     if (Number(budget) > 0) {
@@ -115,7 +116,12 @@ export default function App() {
       {
         valid && (
           <>
-          <FilterSpent spentFilter={spentFilter} setSpentFilter={setSpentFilter}/>
+          <FilterSpent 
+          filtro={filtro} 
+          setFiltro={setFiltro}
+          bills={bills}
+          setBillsFilter={setBillsFilter}
+          />
           <Pressable 
             style={styles.press}
             onPress={() => setModal(!modal)}>
