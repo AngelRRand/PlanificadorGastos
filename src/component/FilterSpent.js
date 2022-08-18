@@ -5,7 +5,12 @@ const FilterSpent = ({filtro, setFiltro, setBillsFilter, bills}) => {
 
 
     useEffect(()=>{
-
+        if(filtro === ''){
+            setBillsFilter([])
+        }else{
+            const filters = bills.filter(g => g.category === filtro)
+            setBillsFilter(filters)
+        }
     },[filtro])
     return (
         <View style={styles.container}>
