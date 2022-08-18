@@ -1,14 +1,19 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import { View, Text, Pressable, Image } from 'react-native'
 import { Picker } from '@react-native-picker/picker';
 const FilterSpent = ({spentFilter, setSpentFilter}) => {
+
+
+    useEffect(()=>{
+
+    },[spentFilter])
     return (
         <View style={styles.container}>
             <Text style={styles.label}>Filter Spent</Text>
             <Picker
                 selectedValue={spentFilter}
                 onValueChange={(value)=>{
-                    spentFilter(value)
+                    setSpentFilter(value)
                 }}
             >
                 <Picker.Item label="--Selection--" value="" />
