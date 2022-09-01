@@ -53,11 +53,8 @@ export default function App() {
   useEffect(() => {
     const obtenerGastosStorage = async()=>{
       try {
-        const obtenerGastos = await AsyncStorage.getItem('PlanificadorGastos') ?? 0
-        if(obtenerPresupuesto >0 ){
-          setBudget(obtenerPresupuesto)
-          setValid(true)
-        }
+        const obtenerGastos = await AsyncStorage.getItem('PlanificadorGastos') 
+        setBills(obtenerGastos ? JSON.parse(obtenerGastos) : [])
       } catch (error) {
         console.log(error)
       }
