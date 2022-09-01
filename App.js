@@ -19,11 +19,28 @@ export default function App() {
   const [filtro, setFiltro] = useState('');
   const [billsFilter, setBillsFilter] = useState([]);
 
+
+  useEffect(() => {
+    const obtenerPresupuesto = async()=>{
+      try {
+        const obtenerPresupuesto = await AsyncStorage.getItem('planificadorPresupuesto') ?? 0
+        if(obtenerPresupuesto >0 ){
+          setBudget(obtenerPresupuesto)
+          setValid(true)
+        }
+      } catch (error) {
+        console.log(error)
+      }
+    }
+    obtenerPresupuesto()
+  }, []);
+
+
   useEffect(() => {
     if(valid){
       const validPresupuest = async()=>{
         try {
-          await AsyncStorage.getItem('planificadorPresupuesto', budget)
+          await AsyncStorage.setItem('planificadorPresupuesto', budget)
         } catch (error) {
           console.log(error)
         }
