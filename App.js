@@ -20,10 +20,11 @@ export default function App() {
   const [billsFilter, setBillsFilter] = useState([]);
 
   useEffect(() => {
-    effect
-    return () => {
-      cleanup
-    };
+    const nombre = 'ola'
+    const AlmacenarAS = async ()=>{
+      await AsyncStorage.setItem('prueba', nombre)
+    }
+    AlmacenarAS()
   }, [input]);
 
   const handleBudget = (budget) => {
