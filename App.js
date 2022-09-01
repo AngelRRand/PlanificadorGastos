@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Modal, View, Alert, Pressable, Image, ScrollView } from 'react-native';
 import { Header } from './src/component/Header';
 import { generatoID } from './src/helpers';
@@ -8,7 +8,7 @@ import FormBudget from './src/component/FormBudget.js';
 import ListExpenses from './src/component/ListExpenses.js';
 import FilterSpent from './src/component/FilterSpent.js';
 import styles from '../Styles/StylesApp.jsx';
-
+import AsyncStorage from '@react-native-async-storage/async-storage'
 
 export default function App() {
   const [valid, setValid] = useState(false);
@@ -18,6 +18,13 @@ export default function App() {
   const [spent, setSpent] = useState({});
   const [filtro, setFiltro] = useState('');
   const [billsFilter, setBillsFilter] = useState([]);
+
+  useEffect(() => {
+    effect
+    return () => {
+      cleanup
+    };
+  }, [input]);
 
   const handleBudget = (budget) => {
     if (Number(budget) > 0) {
