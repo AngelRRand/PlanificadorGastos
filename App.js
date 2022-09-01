@@ -25,7 +25,7 @@ export default function App() {
       await AsyncStorage.setItem('prueba', nombre)
     }
     AlmacenarAS()
-  }, [input]);
+  }, []);
 
   const handleBudget = (budget) => {
     if (Number(budget) > 0) {
