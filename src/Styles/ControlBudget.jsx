@@ -36,6 +36,18 @@ marginHorizontal:20
         textAlign:'center',
         marginBottom:10,
         marginLeft:10,
+    },
+    btn:{
+        backgroundColor:'black',
+        padding: 10,
+        marginBottom:40,
+        borderRadius:5,
+        
+    },
+    btnText:{
+        textAlign:'center',
+        color: 'white',
+        textTransform:'uppercase'
     }
 });
 
