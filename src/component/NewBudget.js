@@ -6,7 +6,12 @@ const NewBudget = ({handleBudget, budget, setBudget}) => {
 
   useEffect(() => {
     const NewAsyng = async() =>{
-      const value = await AsyncStorage.getItem('prueba')
+      try {
+        const value = await AsyncStorage.getItem('prueba')
+        console.log(value)
+      } catch (error) {
+        console.log(error)
+      }
     }
     NewAsyng()
   }, []);
