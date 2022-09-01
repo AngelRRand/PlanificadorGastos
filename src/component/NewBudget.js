@@ -1,20 +1,7 @@
-import React, {useEffect} from 'react'
+import React from 'react'
 import { View, Text, Pressable, TextInput } from 'react-native'
-import AsyncStorage from '@react-native-async-storage/async-storage'
 import styles from '../Styles/NewBudget.jsx'
 const NewBudget = ({handleBudget, budget, setBudget}) => {
-
-  useEffect(() => {
-    const NewAsyng = async() =>{
-      try {
-        const value = await AsyncStorage.getItem('prueba')
-        console.log(value)
-      } catch (error) {
-        console.log(error)
-      }
-    }
-    NewAsyng()
-  }, []);
 
   return (
     <View style={styles.container}>

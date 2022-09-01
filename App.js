@@ -20,12 +20,17 @@ export default function App() {
   const [billsFilter, setBillsFilter] = useState([]);
 
   useEffect(() => {
-    const nombre = 'ola'
-    const AlmacenarAS = async ()=>{
-      await AsyncStorage.setItem('prueba', nombre)
+    if(valid){
+      const validPresupuest = async()=>{
+        try {
+          await AsyncStorage.getItem('planificadorPresupuesto', budget)
+        } catch (error) {
+          console.log(error)
+        }
+      }
+      validPresupuest()
     }
-    AlmacenarAS()
-  }, []);
+  }, [valid]);
 
   const handleBudget = (budget) => {
     if (Number(budget) > 0) {
