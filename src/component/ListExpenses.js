@@ -26,7 +26,7 @@ const ListExpenses = ({ bills, setModal, setSpent, filtro, billsFilter }) => {
           ))
       }
       {
-        bills.length === 0 || (billsFilter.length === 0 && !!filtro)&& (
+        (bills.length === 0 || (billsFilter.length === 0 && !!filtro))&& (
           <Text>No hay Gastos</Text>
         )
       }
