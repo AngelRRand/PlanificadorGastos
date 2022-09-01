@@ -21,10 +21,10 @@ export default function App() {
 
 
   useEffect(() => {
-    const obtenerPresupuesto = async()=>{
+    const obtenerPresupuesto = async () => {
       try {
         const obtenerPresupuesto = await AsyncStorage.getItem('planificadorPresupuesto') ?? 0
-        if(obtenerPresupuesto >0 ){
+        if (obtenerPresupuesto > 0) {
           setBudget(obtenerPresupuesto)
           setValid(true)
         }
@@ -37,8 +37,8 @@ export default function App() {
 
 
   useEffect(() => {
-    if(valid){
-      const validPresupuest = async()=>{
+    if (valid) {
+      const validPresupuest = async () => {
         try {
           await AsyncStorage.setItem('planificadorPresupuesto', budget)
         } catch (error) {
@@ -51,9 +51,9 @@ export default function App() {
 
 
   useEffect(() => {
-    const obtenerGastosStorage = async()=>{
+    const obtenerGastosStorage = async () => {
       try {
-        const obtenerGastos = await AsyncStorage.getItem('PlanificadorGastos') 
+        const obtenerGastos = await AsyncStorage.getItem('PlanificadorGastos')
         setBills(obtenerGastos ? JSON.parse(obtenerGastos) : [])
       } catch (error) {
         console.log(error)
@@ -66,7 +66,7 @@ export default function App() {
 
 
   useEffect(() => {
-    const saveBillsStorage = async()=>{
+    const saveBillsStorage = async () => {
       try {
         await AsyncStorage.setItem('PlanificadorGastos', JSON.stringify(bills))
       } catch (error) {
@@ -75,6 +75,28 @@ export default function App() {
     }
     saveBillsStorage()
   }, [bills]);
+
+
+
+  const resetApp = () => {
+    Alert.alert('¿Deseas Resetar la app?', 'El presupuesto y el gasto se eliminaran',
+      [
+        { text: 'No', style: 'cancel' },
+        {
+          text: 'SI, Eliminar', onPress: async () => {
+            try {
+              await AsyncStorage.clear()
+              setValid(false)
+              setBudget(0)
+              setBills([])
+            } catch (error) {
+              console.log(error)
+            }
+          }
+        }
+      ]
+    )
+  }
 
 
   const handleBudget = (budget) => {
@@ -139,6 +161,7 @@ export default function App() {
               <ControlBudget
                 budget={budget}
                 bills={bills}
+                resetApp={resetApp}
               />
             </>
         }
@@ -146,19 +169,19 @@ export default function App() {
         {
           valid && (
             <>
-            <FilterSpent
-              filtro={filtro}
-              setFiltro={setFiltro}
-              bills={bills}
-              setBillsFilter={setBillsFilter}
-            />
-            <ListExpenses
-              bills={bills}
-              setModal={setModal}
-              setSpent={setSpent}
-              filtro={filtro}
-              billsFilter={billsFilter}
-            />
+              <FilterSpent
+                filtro={filtro}
+                setFiltro={setFiltro}
+                bills={bills}
+                setBillsFilter={setBillsFilter}
+              />
+              <ListExpenses
+                bills={bills}
+                setModal={setModal}
+                setSpent={setSpent}
+                filtro={filtro}
+                billsFilter={billsFilter}
+              />
             </>
           )
         }

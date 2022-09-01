@@ -3,7 +3,7 @@ import { View, Text, Pressable } from 'react-native'
 import { formatQuantity } from '../helpers/index.js'
 import styles from '../Styles/ControlBudget.jsx'
 import CircularProgress from 'react-native-circular-progress-indicator';
-const ControlBudget = ({ budget, bills }) => {
+const ControlBudget = ({ budget, bills, resetApp}) => {
 
     const [available, setAvailable] = useState(0);
     const [spent, setSpent] = useState(0);
@@ -41,6 +41,7 @@ const ControlBudget = ({ budget, bills }) => {
             <View style={styles.containerText}>
                 <Pressable
                     style={styles.btn}
+                    onLongPress={()=>resetApp()}
                 >
                     <Text style={styles.btnText}>
                         Reiniciar App
