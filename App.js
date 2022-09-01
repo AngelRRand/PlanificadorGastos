@@ -49,6 +49,37 @@ export default function App() {
     }
   }, [valid]);
 
+
+  useEffect(() => {
+    const obtenerGastosStorage = async()=>{
+      try {
+        const obtenerGastos = await AsyncStorage.getItem('PlanificadorGastos') ?? 0
+        if(obtenerPresupuesto >0 ){
+          setBudget(obtenerPresupuesto)
+          setValid(true)
+        }
+      } catch (error) {
+        console.log(error)
+      }
+    }
+    obtenerGastosStorage()
+  }, []);
+
+
+
+
+  useEffect(() => {
+    const saveBillsStorage = async()=>{
+      try {
+        await AsyncStorage.setItem('PlanificadorGastos', JSON.stringify(bills))
+      } catch (error) {
+        console.log(error)
+      }
+    }
+    saveBillsStorage()
+  }, [bills]);
+
+
   const handleBudget = (budget) => {
     if (Number(budget) > 0) {
       setValid(true)
